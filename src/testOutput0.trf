@@ -3,16 +3,30 @@
 032 null
 042 null
 052 null
-062 4
-072 0
+062 18
+072 18
 082 0
 102 null
 112 null
 122 null
-132                                                                                        
-XXR 3
+132                                                                                          
+XXR 7
 XXC white1
-001    2 m  m Argandona                            0                             0.0    1     4 b 0
-001    4 m    Guijarro G                           0                             0.0    2     2 w 1
-001    3 m  f Hernandez                            0                             0.0    3     1 b 0
-001    1 m  g Mirzüov Az                           0                             0.0    4     3 w 1
+001    1 m    Engelbrecht, Alfred               2209 GER                         0.0    4     9 w 1    11 b 0
+001    2 m    Stadler, Alexander                2142 GER                         0.0    5    10 b 1    12 w 1
+001    3 m  f Knechtel, Roland                  2122 GER                         0.0    6    11 w 1     9 b 0
+001    4 m    Müller, Michael                   1999 GER                         0.0    7    12 b =    10 w 1
+001    5 m    Fuchs, Michael                    1980 GER                         0.0    8    13 w 1    15 b 0
+001    6 m    Palmi, Herbert                    1978 GER                         0.0    9    14 b 0    16 w 1
+001    7 m    Bergmann, Reiner                  1960 GER                         0.0   10    15 w =    13 b 0
+001    8 m    Woitylak, Steffen                 1949 GER                         0.0   11    16 b 1    17 w 1
+001    9 m    Bernauer, Thomas                  1945 GER                         0.0   12     1 b 0     3 w 1
+001   10 m    Schultes, Christoph, Dr.          1923 GER                         0.0   13     2 w 0     4 b 0
+001   11 m    Rajendrakumar, Revanth            1906 GER                         0.0   14     3 b 0     1 w 1
+001   12 m    Linkamp, Ralf                     1898 GER                         0.0   15     4 w =     2 b 0
+001   13 m    Covaci, Nicolae                   1850 GER                         0.0   16     5 b 0     7 w 1
+001   14 m    Heiduk, Christoph                 1838 GER                         0.0    1     6 w 1  0000 - U
+001   15 m    Raitner, Josef                    1804 GER                         0.0   17     7 b =     5 w 1
+001   16 m    Gurbanli, Shakir                  1741 GER                         0.0   18     8 w 0     6 b 0
+001   17 m    Süß, Michael                      1607 GER                         0.0    2  0000 - U     8 b 0
+001   18 m    Yemelyanenko, Roman               1184 GER                         0.0    3  0000 - Z  0000 - Z
