@@ -41,8 +41,8 @@ public class EloComparatorTest {
      */
     @Test
     public void testCompareEqualEloDifferentDwz() {
-        TournamentPlayerImpl p1 = new TournamentPlayerImpl("Spieler A", 2000, 1800); // Name, Elo, Dwz
-        TournamentPlayerImpl p2 = new TournamentPlayerImpl("Spieler B", 2000, 1900);
+        JavaTournamentPlayer p1 = new JavaTournamentPlayer("Spieler A", 2000, 1800); // Name, Elo, Dwz
+        JavaTournamentPlayer p2 = new JavaTournamentPlayer("Spieler B", 2000, 1900);
         
         EloComparator comp = new EloComparator();
         

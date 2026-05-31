@@ -21,8 +21,8 @@ import trf.api.RankedPlayer;
 import trf.api.RankedPlayer.TiebreakEntry;
 import trf.api.TournamentState;
 import trf.impl.TRFJavafoPairingProvider;
-import trf.impl.tiebreak.Buchholz;
-import trf.impl.tiebreak.SonnebornBerger;
+import trf.tiebreak.Buchholz;
+import trf.tiebreak.SonnebornBerger;
 import trf.parser.TrfParser;
 import trf.test.kotlin.MakeResults;
 
@@ -84,9 +84,9 @@ public class TrfMainRankedPlayer {
             File inputFile1 = new File(".\\src\\funktioniert.trf");
             InputStream inputStreamTRF = new FileInputStream(inputFile1);
             tournament = TrfParser.parse(inputStreamTRF);
-            tournament.setRankingListener(new ConsoleListener());
+            //tournament.setRankingListener(new ConsoleListener());
 
-            pairingProvider = new TRFJavafoPairingProvider(tournament.getInfo(),tournament);
+            pairingProvider = new TRFJavafoPairingProvider(tournament.getInfo());
 
             tournament.getTournamentInfo().listTiebreaksStrategies().add(new Buchholz(0, 0));
             tournament.getTournamentInfo().listTiebreaksStrategies().add(new Buchholz(1, 0));

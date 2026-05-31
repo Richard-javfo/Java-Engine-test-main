@@ -11,8 +11,8 @@
 122 null
 132                                                                                        
 XXR 3
-XXC black1
-001    2 m  m Argandona                            0                             0.0    1     4 w 1     1 b 0     3 w 1
-001    4 m    Guijarro G                           0                             0.0    2     2 b 0     3 w 1     1 w 1
-001    3 m  f Hernandez                            0                             0.0    3     1 w 1     4 b 0     2 b 0
-001    1 m  g Mirzüov Az                           0                             0.0    4     3 b 0     2 w 1     4 b 0
+XXC white1
+001    1 m  g Mirzüov Az                           0                             1.0    4     3 b 0     4 w 1     2 b 0
+001    2 m  m Argandona                            0                             2.0    2     4 w 1     3 b 0     1 w 1
+001    3 m  f Hernandez                            0                             2.0    1     1 w 1     2 w 1     4 b 0
+001    4 m    Guijarro G                           0                             1.0    3     2 b 0     1 b 0     3 w 1

@@ -23,8 +23,8 @@ import trf.api.RankedPlayer.TiebreakEntry;
 import trf.api.TournamentPlayer;
 import trf.api.TournamentState;
 import trf.impl.TRFJavafoPairingProvider;
-import trf.impl.tiebreak.Buchholz;
-import trf.impl.tiebreak.SonnebornBerger;
+import trf.tiebreak.Buchholz;
+import trf.tiebreak.SonnebornBerger;
 import trf.parser.TrfParser;
 import trf.test.kotlin.MakeResults;
 
@@ -66,6 +66,11 @@ public class TrfMainNiederbayrische {
         pairingProvider.fill(pairList, tournament.getTournamentPlayers());
         
         tournament.updateRanking();
+         System.out.println("");
+        for(RankedPlayer p:tournament.getLastRankedResults())
+            System.out.println(p.getActualRank() + " " + p.getTournamentPlayer().getName() + " " + p.getTournamentPlayer().getPoints());
+            
+      
         pairingProvider.generateInitialTrf(outputStreamTrf);  // Testfile
         
         
@@ -90,7 +95,7 @@ public class TrfMainNiederbayrische {
             InputStream inputStreamTRF = new FileInputStream(inputFile1);
             tournament = TrfParser.parse(inputStreamTRF);
             tournament.setRankingListener(new ConsoleListener());
-            pairingProvider = new TRFJavafoPairingProvider(tournament.getInfo(),tournament);
+            pairingProvider = new TRFJavafoPairingProvider(tournament.getInfo());
 
            
             tournament.getTournamentInfo().listTiebreaksStrategies().add(new Buchholz(1, 0));
