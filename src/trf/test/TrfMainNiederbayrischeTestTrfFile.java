@@ -72,7 +72,7 @@ public class TrfMainNiederbayrischeTestTrfFile {
             File inputFile1 = new File(".\\src\\Niederbayrische-2026-Runde1.trf");
             InputStream inputStreamTRF = new FileInputStream(inputFile1);
             tournament = TrfParser.parse(inputStreamTRF);
-           
+            
             pairingProvider = new TRFJavafoPairingProvider(tournament.getInfo());
 
            
