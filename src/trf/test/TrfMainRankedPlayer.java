@@ -58,7 +58,7 @@ public class TrfMainRankedPlayer {
 //        InputStream nputStreamTRF = new FileInputStream(inputFile);
 
                 
-        List<Pairing> pairList = pairingProvider.execPairing("");
+        List<Pairing> pairList = pairingProvider.execPairing("1001aaa");
         MakeResults.pairEntries(pairList);
         pairingProvider.fill(pairList, tournament.getTournamentPlayers());
         

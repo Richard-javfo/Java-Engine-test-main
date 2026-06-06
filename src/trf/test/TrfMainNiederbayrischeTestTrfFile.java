@@ -10,23 +10,13 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.PrintStream;
-import java.nio.charset.StandardCharsets;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import trf.api.Pairing;
-import trf.api.RankedPlayer;
-import trf.api.RankedPlayer.TiebreakEntry;
-import trf.api.TournamentPlayer;
 import trf.api.TournamentState;
 import trf.impl.TRFJavafoPairingProvider;
 import trf.tiebreak.Buchholz;
 import trf.tiebreak.SonnebornBerger;
 import trf.parser.TrfParser;
-import trf.test.kotlin.MakeResults;
 
 /**
  *
