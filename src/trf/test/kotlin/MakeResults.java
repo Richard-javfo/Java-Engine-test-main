@@ -16,12 +16,12 @@ public class MakeResults {
     public  static void pairEntries(List<Pairing> pairList){
         
         for(Pairing pair:pairList){
-            if(pair.whiteRound().opponentStartRank!=0)
-                pair.whiteRound().result='1';
+            if(pair.whiteRound().opponentStartRank()!=0)
+                pair=pair.withWhiteRound(pair.whiteRound().withResult('1'));
             
             if(pair.blackRound()!=null)
-                pair.blackRound().result='0';
-            
+               pair=pair.withBlackRound(pair.blackRound().withResult('0'));
+                
         }
     }
     

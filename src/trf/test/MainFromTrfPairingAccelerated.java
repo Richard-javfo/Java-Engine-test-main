@@ -10,8 +10,10 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import trf.api.Pairing;
 import trf.api.TournamentState;
 import trf.impl.TRFJavafoPairingProvider;
 import trf.tiebreak.Buchholz;
@@ -22,30 +24,20 @@ import trf.parser.TrfParser;
  *
  * @author DP
  */
-public class TrfMainNiederbayrischeTestTrfFile {
+public class MainFromTrfPairingAccelerated {
 
     
     private static TournamentState tournament;
     private static TRFJavafoPairingProvider pairingProvider;
-
+    static File inputFile1 = new File(".\\src\\AcceleratedTRFXSample2-forPairing.txt");
+    static     File outputFileTrf = new File(".\\src\\AcceleratedTRFXSample2-regenerated.trf");// Testfile
 
     private static  void testGenerateTrfFile() throws FileNotFoundException {
 
-        File outputFileTrf = new File(".\\src\\Niederbayrische-2026-Runde1-regenerated.trf");// Testfile
-       OutputStream outputStreamTrf = new FileOutputStream(outputFileTrf);// Testfile
-//        File inputFile = new File(".\\src\\testOutput"+count+".trf");
-//        InputStream nputStreamTRF = new FileInputStream(inputFile);
-
-        
-        
-       
-        pairingProvider.generateInitialTrf(outputStreamTrf);  // Testfile
-        
-        
-
       
-        
-        
+       OutputStream outputStreamTrf = new FileOutputStream(outputFileTrf);// Testfile
+        pairingProvider.generateInitialTrf(outputStreamTrf);  // Testfile
+    
 
     }
 
@@ -59,24 +51,27 @@ public class TrfMainNiederbayrischeTestTrfFile {
         try {
             //         
 //
-            File inputFile1 = new File(".\\src\\Niederbayrische-2026-Runde1.trf");
+            
             InputStream inputStreamTRF = new FileInputStream(inputFile1);
             tournament = TrfParser.parse(inputStreamTRF);
             
             pairingProvider = new TRFJavafoPairingProvider(tournament.getInfo());
+            
 
            
             tournament.getTournamentInfo().listTiebreaksStrategies().add(new Buchholz(1, 0));
             tournament.getTournamentInfo().listTiebreaksStrategies().add(new SonnebornBerger(1, 0));
             //tournament.updateRanking();
             
-           testGenerateTrfFile();
+           List<Pairing> pairings = pairingProvider.execPairing("1001");
            
-    
+          for(Pairing p:pairings){
+              System.out.println(p.pairStr());
+          }
 
 
         } catch (Exception ex) {
-            Logger.getLogger(TrfMainNiederbayrischeTestTrfFile.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MainFromTrfPairingAccelerated.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

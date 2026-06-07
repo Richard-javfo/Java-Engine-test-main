@@ -10,8 +10,10 @@
 102 IA Mikel Larreategi Arana (22232540)
 112 
 122 moves/time, increment
+132                                                                                        26/05/13  26/05/13  26/05/13  26/05/13  
 XXR 9
 XXZ 22 28 43
+XXP 1 2
 001    1 m  g Mirzoev Azer                      2527 AZE    13400304 1978        4.0    1    26 w 1    13 b 1     8 w 1     4 b 1  
 001    2 m  m Argandona Riveiro Inigo           2408 ESP     2212072 1981        4.0    2    27 b 1    15 w 1     7 b 1     5 w 1  
 001    3 m  f Hernandez Elvis                   2282 DOM     6400353 1981        3.5    3    29 w 1    14 b 1    10 w 1     6 b =  

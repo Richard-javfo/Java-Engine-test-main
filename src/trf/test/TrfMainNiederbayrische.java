@@ -61,7 +61,7 @@ public class TrfMainNiederbayrische {
 
         
         
-        List<Pairing> pairList = pairingProvider.execPairing("1000");
+        List<Pairing> pairList = pairingProvider.execPairing("1001");
         MakeResults.pairEntries(pairList);
         pairingProvider.fill(pairList, tournament.getTournamentPlayers());
         
