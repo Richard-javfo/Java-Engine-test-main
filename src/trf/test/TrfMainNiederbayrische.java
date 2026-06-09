@@ -21,8 +21,8 @@ import trf.api.Pairing;
 import trf.api.RankedPlayer;
 import trf.api.RankedPlayer.TiebreakEntry;
 import trf.api.TournamentPlayer;
-import trf.api.TournamentState;
-import trf.impl.TRFJavafoPairingProvider;
+import trf.impl.TournamentState;
+import trf.api.TRFJavafoPairingProvider;
 import trf.tiebreak.Buchholz;
 import trf.tiebreak.SonnebornBerger;
 import trf.parser.TrfParser;
@@ -42,7 +42,7 @@ public class TrfMainNiederbayrische {
         PrintStream out = new PrintStream(System.out, true, StandardCharsets.UTF_8);
         List<RankedPlayer> rankedPlayers;
         rankedPlayers = tournament.getLastRankedResults();
-        System.out.println("After Round " + tournament.getCurrentRound());
+       
         for (int i = 0; i < rankedPlayers.size() ; i++) {
             RankedPlayer p = rankedPlayers.get(i);
             out.printf(Locale.US, " %4d %4d   %-33s %4.1f", i+1, p.getElo(), p.getName(), p.points());

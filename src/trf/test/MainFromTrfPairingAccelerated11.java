@@ -24,7 +24,7 @@ import trf.parser.TrfParser;
  *
  * @author DP
  */
-public class MainFromTrfPairingAccelerated {
+public class MainFromTrfPairingAccelerated11 {
 
     
     private static TournamentState tournament;
@@ -32,7 +32,15 @@ public class MainFromTrfPairingAccelerated {
     static File inputFile1 = new File(".\\src\\AcceleratedTRFXSample2-forPairing.txt");
     static     File outputFileTrf = new File(".\\src\\AcceleratedTRFXSample2-regenerated.trf");// Testfile
 
+    private static  void testGenerateTrfFile() throws FileNotFoundException {
+
+      
+       OutputStream outputStreamTrf = new FileOutputStream(outputFileTrf);// Testfile
+        pairingProvider.generateInitialTrf(outputStreamTrf);  // Testfile
     
+
+    }
+
    
 
     /**
@@ -55,7 +63,7 @@ public class MainFromTrfPairingAccelerated {
             tournament.getTournamentInfo().listTiebreaksStrategies().add(new SonnebornBerger(1, 0));
             //tournament.updateRanking();
             
-           List<Pairing> pairings = pairingProvider.execPairing("1001");
+           List<Pairing> pairings = pairingProvider.execPairing("1000");
            
           for(Pairing p:pairings){
               System.out.println(p.pairStr());
@@ -63,7 +71,7 @@ public class MainFromTrfPairingAccelerated {
 
 
         } catch (Exception ex) {
-            Logger.getLogger(MainFromTrfPairingAccelerated.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MainFromTrfPairingAccelerated11.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

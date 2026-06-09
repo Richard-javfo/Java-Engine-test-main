@@ -21,7 +21,7 @@ public class ConsoleListener implements RankingUpdateListener {
     public void onRankingUpdated(List<RankedPlayer> rankedPlayers) {
         
         PrintStream out = new PrintStream(System.out, true, StandardCharsets.UTF_8);
-        System.out.println("After Round " + rankedPlayers.getFirst().currentRound());
+        
         for (int i = 0; i < rankedPlayers.size() ; i++) {
             RankedPlayer p = rankedPlayers.get(i);
             out.printf(Locale.US, " %4d %4d   %-33s %4.1f", i+1, p.getElo(), p.getName(), p.points());
