@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import trf.impl.TournamentState;
+import trf.api.TournamentState;
 import trf.api.TRFJavafoPairingProvider;
 import trf.tiebreak.Buchholz;
 import trf.tiebreak.SonnebornBerger;

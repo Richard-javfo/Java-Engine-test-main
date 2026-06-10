@@ -12,7 +12,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import trf.impl.JavaTournamentPlayer;
 
 /**
@@ -47,8 +46,8 @@ public class DsbCsvPlayerSource implements PlayerLoader {
                 String[] cols = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
 
                 if (cols.length >= 15) {
-                    JavaTournamentPlayer p = new JavaTournamentPlayer("Spieler A", 2000, 1800);
-
+                    //JavaTournamentPlayer p = new JavaTournamentPlayer("Spieler A", 2000, 1800);
+                    JavaTournamentPlayer p = new JavaTournamentPlayer();
                     p.setNationalId(cols[0].trim());
 
                     // Name: Entfernt Anführungszeichen (Index 4)

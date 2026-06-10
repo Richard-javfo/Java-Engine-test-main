@@ -21,7 +21,7 @@ import trf.api.Pairing;
 import trf.api.RankedPlayer;
 import trf.api.RankedPlayer.TiebreakEntry;
 import trf.api.TournamentPlayer;
-import trf.impl.TournamentState;
+import trf.api.TournamentState;
 import trf.api.TRFJavafoPairingProvider;
 import trf.tiebreak.Buchholz;
 import trf.tiebreak.SonnebornBerger;
