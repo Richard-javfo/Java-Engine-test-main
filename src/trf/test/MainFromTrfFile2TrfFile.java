@@ -12,8 +12,10 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import trf.api.BakuStrategy;
 import trf.api.TournamentState;
 import trf.api.TRFJavafoPairingProvider;
+import trf.parser.TournamentInfoImpl;
 import trf.tiebreak.Buchholz;
 import trf.tiebreak.SonnebornBerger;
 import trf.parser.TrfParser;
@@ -27,7 +29,7 @@ public class MainFromTrfFile2TrfFile {
     
     private static TournamentState tournament;
     private static TRFJavafoPairingProvider pairingProvider;
-    static File inputFile1 = new File(".\\src\\AcceleratedTRFXSample2.txt");
+    static File inputFile1 = new File(".\\src\\TRFXSample2.txt");
     static     File outputFileTrf = new File(".\\src\\AcceleratedTRFXSample2-regenerated.trf");// Testfile
 
     private static  void testGenerateTrfFile() throws FileNotFoundException {
@@ -52,8 +54,9 @@ public class MainFromTrfFile2TrfFile {
             
             InputStream inputStreamTRF = new FileInputStream(inputFile1);
             tournament = TrfParser.parse(inputStreamTRF);
+            TournamentInfoImpl infoImpl = new TournamentInfoImpl(tournament.getInfo(),BakuStrategy.CLASSICAL_BAKU);
             
-            pairingProvider = new TRFJavafoPairingProvider(tournament.getInfo());
+            pairingProvider = new TRFJavafoPairingProvider(infoImpl);
 
            
             tournament.getTournamentInfo().listTiebreaksStrategies().add(new Buchholz(1, 0));

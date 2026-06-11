@@ -29,8 +29,8 @@ public class MainFromTrfPairingAccelerated {
     
     private static TournamentState tournament;
     private static TRFJavafoPairingProvider pairingProvider;
-    static File inputFile1 = new File(".\\src\\AcceleratedTRFXSample2-forPairing.txt");
-    static     File outputFileTrf = new File(".\\src\\AcceleratedTRFXSample2-regenerated.trf");// Testfile
+    static File inputFile1 = new File(".\\src\\AcceleratedTRFXSample2-regenerated.trf");
+    static     File outputFileTrf = new File(".\\src\\XXXXAcceleratedTRFXSample2-regeneratedXXX.trf");// Testfile
 
     
    
