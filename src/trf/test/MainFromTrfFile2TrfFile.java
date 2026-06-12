@@ -30,7 +30,7 @@ public class MainFromTrfFile2TrfFile {
     private static TournamentState tournament;
     private static TRFJavafoPairingProvider pairingProvider;
     static File inputFile1 = new File(".\\src\\TRFXSample2.txt");
-    static     File outputFileTrf = new File(".\\src\\AcceleratedTRFXSample2-regenerated.trf");// Testfile
+    static     File outputFileTrf = new File(".\\src\\NewAcceleratedTRFXSample2-regenerated.trf");// Testfile
 
     private static  void testGenerateTrfFile() throws FileNotFoundException {
 
